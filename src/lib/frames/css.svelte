@@ -5,6 +5,7 @@
 	function handleInput(event: Event) {
 		if (event.target instanceof HTMLTextAreaElement) {
 			$HCJStore.css = event.target.value as string;
+			$HCJStore = { ...$HCJStore, css: event.target.value as string };
 		}
 	}
 </script>

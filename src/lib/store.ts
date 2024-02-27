@@ -4,7 +4,13 @@ export type HCJ = {
 	html: string | '';
 	css: string | '';
 	js: string | '';
-	data: Record<string, unknown>;
+	meta: {
+		title: string | 'Untitled';
+		description: string | '';
+		tags: string[] | [];
+		id: string | '';
+		forkedFrom: string | '';
+	};
 };
 
 export const HCJStore = writable<HCJ>({});

@@ -10,10 +10,10 @@
 		}
 	}
 
-	$: console.log('HTML store', $HCJStore.html);
+	// $: console.log('HTML store', $HCJStore.html);
 </script>
 
-<textarea name="html" id="" cols="30" rows="10" bind:value on:change={handleInput}></textarea>
+<textarea name="html" id="" cols="30" rows="10" bind:value on:input={handleInput}></textarea>
 
 <style>
 	textarea {
