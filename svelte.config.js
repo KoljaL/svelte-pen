@@ -13,8 +13,8 @@ const config = {
 		// 	fallback: 'index.html'
 		// }),
 		adapter: adapterGhpages({
-	    pages: 'build',
-      assets: 'build',
+	    pages: 'docs',
+      assets: 'docs',
       fallback: null
 		}
     ),
