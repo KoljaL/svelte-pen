@@ -9,7 +9,11 @@
 		"skipLibCheck": true,
 		"sourceMap": true,
 		"strict": true,
-		"moduleResolution": "bundler"
+		"moduleResolution": "node"
+		// "module": "es20215",
+		// "target": "es20215"
+		// "moduleResolution": "bundler",
+		// "module": "ESNext"
 	}
 	// Path aliases are handled by https://kit.svelte.dev/docs/configuration#alias
 	//

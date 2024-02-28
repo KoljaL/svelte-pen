@@ -4,7 +4,7 @@
 	import { debounce } from '$lib/util';
 	import { config } from '$lib/config';
 
-	export const language: 'html' | 'css' | 'javascript' = 'html';
+	export let language: string;
 
 	// @ts-ignore
 	let value = $HCJStore[language];

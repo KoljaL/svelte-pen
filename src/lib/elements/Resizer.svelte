@@ -20,9 +20,9 @@
 	{style}
 >
 	<slot />
-	{#if direction === 'vertical'}
+	<!-- {#if direction === 'vertical'}
 		<button> click </button>
-	{/if}
+	{/if} -->
 </div>
 
 <style>

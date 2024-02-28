@@ -2,43 +2,27 @@
 	// https://svelte.dev/repl/eefc5b3e2311457693f153dcdf3ece2f?version=3.19.2
 
 	import { HCJStore } from '$lib/store';
+	import { config } from '$lib/config';
 	let iFrameEl: HTMLDivElement;
 
-	const script = 'script';
-	const style = 'style';
-
-	$: iFrameContent = `<!doctype html>
-		<html style="height: 100% !important">
-			<head>
-				<meta charset='utf-8'>
-				<base href='/' />
-				<${style}>
-					${$HCJStore.css}
-				</${style}>
-			</head>
-			<body>
-			${$HCJStore.html}
-				<${script}>
-						${$HCJStore.js}
-				</${script}>
-			</body>
-		</html>`;
+	$: iFrameContentDoc = config.iFrameContent($HCJStore);
 </script>
 
 <iframe
 	bind:this={iFrameEl}
-	title="Result"
+	title="rendered"
+	id="rendered"
 	sandbox="allow-popups-to-escape-sandbox allow-scripts allow-popups allow-forms allow-pointer-lock allow-top-navigation allow-modals allow-scripts"
-	srcdoc={iFrameContent}
+	srcdoc={iFrameContentDoc}
 >
 </iframe>
 
 <style>
 	:global(iframe) {
-		border: 1px solid #000;
+		border: none;
 		width: 100%;
 		height: 100%;
-		padding: 20px;
-		overflow: scroll;
+		padding: 0;
+		/* overflow: scroll; */
 	}
 </style>

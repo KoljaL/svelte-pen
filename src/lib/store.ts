@@ -3,7 +3,7 @@ import { writable } from 'svelte/store';
 export type HCJ = {
 	html: string | '';
 	css: string | '';
-	js: string | '';
+	javascript: string | '';
 	meta: {
 		title: string | 'Untitled';
 		description: string | '';
@@ -12,5 +12,16 @@ export type HCJ = {
 		forkedFrom: string | '';
 	};
 };
-
-export const HCJStore = writable<HCJ>({});
+export const HCJStore = writable<HCJ>({
+	html: '',
+	css: '',
+	javascript: '',
+	meta: {
+		title: 'Untitled',
+		description: '',
+		tags: [],
+		id: '',
+		forkedFrom: ''
+	}
+});
+// export const HCJStore = writable<HCJ>({});
