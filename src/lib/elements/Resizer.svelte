@@ -50,7 +50,7 @@
 		cursor: ns-resize;
 	}
 
-	button {
+	/* button {
 		background-color: #333;
 		color: white;
 		border: none;
@@ -59,5 +59,5 @@
 
 	button:hover {
 		background-color: #444;
-	}
+	} */
 </style>

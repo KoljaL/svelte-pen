@@ -46,7 +46,7 @@ export const config: Config = {
 		javascriptPaneSize: 30,
 		consolePaneSize: 1,
 		fontSize: 14,
-		debounceTimeout: 300
+		debounceTimeout: 500
 	}
 };
 
